@@ -136,6 +136,7 @@ var a = new validator('example_form',[
     - `required` -> 是否为必填
     - `max_length` -> 最大字符长度
     - `min_length` -> 最小字符长度
+    - `noSpecial` -> 判断是否没有特殊字符
     - `same(field)` -> 指定字段内容是否相同
     - `different(field)` -> 拒绝与某个字段相等,比如登录密码与交易密码情况
     - `contains(field)` -> 直接判断字符串是否相等
