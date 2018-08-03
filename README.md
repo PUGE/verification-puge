@@ -12,16 +12,16 @@
 
 ```bash
 # npm 安装
-$ npm install validator.tool --save
-# bower 安装
-$ bower info validator.tool
+$ npm install verification-puge --save
+# yarn 安装
+$ yarn add verification-puge
 ```
 
 在 `.js` 文件中调用
 
 ```js
 // 字符串验证
-var validator = require('validator.tool');
+var validator = require('verification-puge');
 var v = new validator();
 v.isEmail('wowohoo@qq.com');
 v.isIp('192.168.23.3');
@@ -41,16 +41,10 @@ var a = new validator('example_form',[
 
 ## 客户端使用
 
-在应用中引用 `validator.min.js` 文件, 手动下载并链接HTML中的 [validator.min.js](https://github.com/jaywcjlove/validator.js/tree/master/dist)
+在应用中引用 `validator.js` 文件, 手动下载并链接HTML中的 [validator.js](https://github.com/jaywcjlove/validator.js/tree/master/dist)
 
 ```html
 <script type="text/javascript" src="dist/validator.min.js"></script>
-```
-
-也可以通过 [UNPKG](https://unpkg.com/validator.tool/) 下载：
-
-```html
-<script type="text/javascript" src="https://unpkg.com/validator.tool/dist/validator.min.js"></script>
 ```
 
 在JS中使用方法。
