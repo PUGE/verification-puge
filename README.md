@@ -35,10 +35,10 @@ var a = new validator('example_form',[
 
 ## 客户端使用
 
-在应用中引用 `validator.js` 文件, 手动下载并链接HTML中的 [validator.js](https://github.com/jaywcjlove/validator.js/tree/master/dist)
+在应用中引用 `validator.js` 文件, 手动下载并链接HTML中的 [validator.js](https://github.com/PUGE/verification-puge/tree/master)
 
 ```html
-<script type="text/javascript" src="dist/validator.min.js"></script>
+<script type="text/javascript" src="./validator.js"></script>
 ```
 
 在JS中使用方法。
@@ -50,51 +50,6 @@ var a = new validator('example_form',[
   v.isIp('192.168.23.3');
 </script>
 ```
-
-应用在表单中的方法。
-
-```html 
-<form id="example_form">
-    <div>
-        <label for="email">邮箱验证</label>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Email">
-    </div>
-    <div class="form-group">
-        <label for="passworld">密码:</label>
-        <input type="passworld" name="passworld" id="passworld" class="form-control" placeholder="输入密码">
-    </div>
-
-    <div class="form-group">
-        <label for="repassworld">确认密码:</label>
-        <input type="repassworld" name="repassworld" id="repassworld" class="form-control" placeholder="输入密码">
-    </div>
-</form>
-<script type="text/javascript">
-  var validator = new Validator('example_form',[
-    {
-        //name 字段
-        name: 'email',
-        display:"你输入的不{{email}}是合法邮箱|不能为空|太长|太短",
-        // 验证条件
-        rules: 'is_emil|max_length(12)'
-        // rules: 'valid_email|required|max_length(12)|min_length(2)'
-    },{
-      name:"passworld",
-      display:"必填",
-      rules: 'required'
-    },{
-      name:"repassworld",
-      display:"密码不一致",
-      rules: 'same(passworld)'
-    }
-  ],function(obj,evt){
-      if(obj.errors){
-          // 判断是否错误
-      }
-  })
-</script>
-```
-
 
 ## 说明文档
 
